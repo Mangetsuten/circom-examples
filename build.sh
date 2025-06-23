@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Prompt for circuit name (without extension)
 read -p "Enter the circuit name (without .circom): " CIRCUIT_NAME
 
