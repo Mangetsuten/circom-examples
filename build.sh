@@ -28,7 +28,7 @@ fi
 snarkjs wtns check "$ROOT_DIR/$CIRCUIT_NAME.r1cs" "$ROOT_DIR/witness.wtns"
 
 # Setup ptau
-cd "$ROOT_DIR"
+cd "$ROOT_DIR"/..
 mkdir -p powersoftau
 cd powersoftau
 
@@ -64,7 +64,7 @@ fi
 cd "$ROOT_DIR"
 mkdir -p zkey
 cd zkey
-snarkjs plonk setup "../$CIRCUIT_NAME.r1cs" "../powersoftau/$PTAU_FILE" "phase1_${CIRCUIT_NAME}_power_plonk.zkey"
+snarkjs plonk setup "../$CIRCUIT_NAME.r1cs" "../../powersoftau/$PTAU_FILE" "phase1_${CIRCUIT_NAME}_power_plonk.zkey"
 
 # Create the key for verifier
 snarkjs zkey export verificationkey "phase1_${CIRCUIT_NAME}_power_plonk.zkey" verification_key_plonk.json
