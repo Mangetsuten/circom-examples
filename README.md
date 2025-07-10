@@ -12,6 +12,9 @@ Branch `main` is just the circom files and you can create witness with your desi
 - [Circom](https://docs.circom.io/getting-started/installation/)
 - SnarkJS: <code>npm install snarkjs</code>
 
+# Dependencies (Circom libraries)
+- circomlib: <code>npm install circomlib</code>
+
 # Building
 You can build and get the verification by running the build script. Just add you circuit file with proper name. You main Circom file should have the same name as your folder. Example of stucture can be seen in already circuits (e.g., add, fibonacci).\
 You just need to run `build.sh` and then pass the name of your circuit file (without `.circom` extension).\
