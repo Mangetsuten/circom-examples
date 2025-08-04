@@ -5,9 +5,8 @@ template Div() {
     signal input b;
     signal output c;
 
-    // Check to see if b is zero (check (1 / b) * b = 1)
     signal inverse;
-    inverse <-- 1 / b;
+    inverse <-- b == 0 ? 0 : 1/b;  // Assign 0 when b is 0, otherwise 1/b
     signal isZero;
     isZero <-- b * inverse;
     isZero === 1;
