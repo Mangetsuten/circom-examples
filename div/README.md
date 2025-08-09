@@ -1,7 +1,9 @@
 # Intro
 
 In Circom all numbers are elements of a finite field with a large prime modulus p (e.g., BN254 $p = 21888242871839275222246405745257275088548364400416034343698204186575808495617)$). So the range of numbers are from $0$ to $p-1$. Also we don't have any floating-point numbers. Negative numbers are represented using the modulus. For example $-1 \mod 7 = 6$. So how does Circom perform this computation?
-$$a = 10,\ b = 12 => 10 / 12 = 0.8333$$
+$$
+a = 10,\ b = 12 => 10 / 12 = 0.8333
+$$
 
 # Fermat's Little Theorem
 
